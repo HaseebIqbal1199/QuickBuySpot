@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div id="fart"></div>
+    <script>
+        const a = (localStorage.getItem("cartactive")).split(",")
+        let prod = []
+        $(document).ready(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/getproductlist',
+                contentType: 'application/json',
+                success: function(response) {
+                    dl = response.result
+                    for (let k = 0; k < a.length; k++) {
+                        for (let j = 0; j < dl.length; j++) {
+                            if (dl[j].ProductID == a[k]) {
+                                prod.push(dl[j].ProductName)
+                            }
+                        }
+                    }
+                    console.log(prod);
+                    document.getElementById('fart').innerHTML = prod
+                    
+                },
+                error: function(error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
