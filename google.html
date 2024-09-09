@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Image Search</title>
+</head>
+<body>
+
+  <h1>Search for Product Images</h1>
+  <input type="text" id="productInput" placeholder="Enter product name" />
+  <button onclick="searchProduct()">Search</button>
+
+  <div id="results"></div>
+
+  <script>
+    const API_KEY = 'AIzaSyCsFbrACohxEdaunFflEwtKuT6SDr6cJq8';  // Replace with your Google API Key
+    const CX = '0481bb4d1bf9b4071';  // Replace with your Search Engine ID
+
+    async function searchProduct() {
+      const productName = document.getElementById('productInput').value;
+      const searchUrl = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(productName)}&cx=${CX}&key=${API_KEY}&searchType=image`;
+
+      try {
+        const response = await fetch(searchUrl);
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+  </script>
+
+</body>
+</html>

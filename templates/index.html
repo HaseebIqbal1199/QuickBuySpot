@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header attr="123456" id="g">
+    <header>
         <nav>
             <div class="logo">
                 <h1>Shopicoo</h1>
@@ -27,16 +27,67 @@
         </nav>
     </header>
     <!-- Categories -->
-     <div class="categorySection"></div>
+     <div class="categorySection">
+        <div class="GenderSelection SelctionCard">
+            <h3>Gender</h3>
+            <div class="Male">
+                <input type="radio" name="gender" id="maleoption" value="male">
+                <label for="maleoption">Male</label>
+            </div>
+            <div class="Female">
+                <input type="radio" name="gender" id="femaleoption" value="female">
+                <label for="femaleoption">Female</label>
+            </div>
+        </div>
+
+        <div class="CategorySelection SelctionCard">
+            <h3>Categories</h3>
+            <div>
+                <input type="radio" name="category"  id="Electronics" value="Electronics">
+                <label for="Electronics">Electronics</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="Furniture" value="Furniture">
+                <label for="Furniture">Furniture</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="Fashion" value="Fashion">
+                <label for="Fashion">Fashion</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="Health" value="Health">
+                <label for="Health">Health</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="Beauty" value="Beauty">
+                <label for="Beauty">Beauty</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="Sports" value="Sports">
+                <label for="Sports">Sports</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="Books" value="Books">
+                <label for="Books">Books</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="Gadgets" value="Gadgets">
+                <label for="Gadgets">Gadgets</label>
+            </div>
+        </div>
+     </div>
      <!-- Main -->
      <main>  
      </main>
      <!-- Ads -->
-     <div class="adSection"></div>
+     <div class="adSection">
+        Your ads Here
+     </div>
 
      <script src="../static/js/modules/CardSnippet.js"></script>
      <script src="../static/js/modules/FetchImage.js"></script>
      <script src="../static/js/modules/RequestProducts.js"></script>
+     <script src="../static/js/modules/Categories.js"></script>
      <script src="../static/js/script.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 function cardSnippet(Data,index) {
     return `
-            <div class="card" attr="${Data[index].ProductID}">
+            <div class="card ${Data[index].category}" attr="${Data[index].ProductID}">
             <div class="card-img">
                 <img src="" alt="" srcset="">
             </div>

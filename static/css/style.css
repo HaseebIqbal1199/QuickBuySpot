@@ -68,13 +68,43 @@ header{
 /* START OF CATEGORISE SECTION */
 
 .categorySection{
-    /* background-color: red; */
     position: fixed;
-    height: 100vh;
+    height: 98vh;
     width: 20%;
     margin-right: auto;
-    z-index: -1;
+    /* z-index: 5; */
+    padding: 6% 1%;
+    box-sizing: border-box;
+    border-radius: 0 15px 15px 0;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .SelctionCard{
+      background: rgb(197, 197, 197);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      h3{
+        /* background-color: red; */
+        padding: 10px 0;
+        border-bottom: 2px solid #1b191993;
+      }
+    }
+    .GenderSelection{
+      .Male,
+      .Female{
+        margin-left: 15px;
+      }
+    }
+    .AgeSelection{
+      div{
+        margin-left: 15px;
 
+      }
+    }
 }
 
 /* END OF CATEGORISE SECTION */
@@ -92,7 +122,7 @@ main{
     width: 56%;
     box-sizing: border-box;
     padding: 25px;
-    margin-top: 70px;
+    margin-top: 6.5%;
     margin-left: auto;
     margin-right: auto;
     font-family: "Poppins", sans-serif;
@@ -130,9 +160,9 @@ main{
   .card-img {
       /* clear and add new css */
       width: 100%;
-    transition: all 0.5s;
-    display: flex;
-    justify-content: center;
+      transition: all 0.5s;
+      display: flex;
+      justify-content: center;
   }
   
   .card-img img {
@@ -233,6 +263,9 @@ main{
     position: fixed;
     right: 0;
     z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* END OF AD SECTION */

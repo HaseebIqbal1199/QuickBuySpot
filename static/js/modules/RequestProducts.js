@@ -1,3 +1,4 @@
+let productData;
 function requestProducts() {
     $(document).ready(function(){
         $.ajax({
@@ -6,6 +7,8 @@ function requestProducts() {
             contentType: 'application/json',
             success: function(response) {
                 Data = response.result
+                productData = Data // for Categories
+                
                 for (let i = 0; i < Data.length; i++) {        
                     main.innerHTML += cardSnippet(Data,i)
 
@@ -14,7 +17,7 @@ function requestProducts() {
                     productNames = document.querySelectorAll(".card .card-title")
                     imgTags = document.querySelectorAll(".card .card-img img")
 
-                    searchImages(Data[i].ProductName,i) // Passing "Data[i].ProductName" as query and "i" to push requested image in relevant <img>
+                    searchImagesPexel(Data[i].ProductName,i) // Passing "Data[i].ProductName" as query and "i" to push requested image in relevant <img>
                 }
 
                 cartBtns.forEach((e,rel) => {

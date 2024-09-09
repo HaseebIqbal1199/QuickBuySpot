@@ -26,10 +26,11 @@ def getlist():
                     'ProductName', ProductName,
                     'ProductDescription', ProductDescription,
                     'ProductImageURL', ProductImageURL,
-                    'Cost', Cost
+                    'Cost', Cost,
+                    'category', Category
                 )
             ) AS products_json
-            FROM products_list;
+            FROM updated_products_list;
         """)
         jsonData = cursor.fetchone()
         result = jsonData[0]
